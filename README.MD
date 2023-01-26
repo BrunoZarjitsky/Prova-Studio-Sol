@@ -1,16 +1,16 @@
 # Prova Backend Studio Sol
-## **Bruno Zarjitsky - Desenvolvedor Backend**
-## **brunozar@poli.ufrj.br**
-## **[LinkedIn](https://www.linkedin.com/in/brunozar "linkedin.com/in/brunozar")**
-## **[GitHub](https://github.com/BrunoZarjitsky)**
-
+### **Bruno Zarjitsky - Desenvolvedor Backend**
+### **brunozar@poli.ufrj.br**
+### **[LinkedIn](https://www.linkedin.com/in/brunozar "linkedin.com/in/brunozar")**
+### **[GitHub](https://github.com/BrunoZarjitsky)**
+---
 ### **Objetivo**: Desenvolver uma API para verificação de senha seguindo os seguintes critérios
  - **minSize:**  Ter pelo menos **X** caracteres
  - **minUppercase:** Ter pelo menos **X** caracteres maiúsculos
  - **minLowercase:** Ter pelo menos **X** caracteres minúsculos
  - **minDigit**: Ter pelo menos **X** dígitos (0-9)
- - **minSpecialChars**: Ter pelo menos **X** caracteres especiais ( !@#$%^&*()-+\/{}[] )
- - **noRepeted**: Não ter nenhum caractere repetido em sequência
+ - **minSpecialChars**: Ter pelo menos **X** caracteres especiais ( !@#$%^&*()-+\\/{}[] )
+ - **noRepeted**: Não ter nenhum caracter repetido em sequência
 
 ### **Entrada**
 Como entrada, a API deve receber uma requisição HTTP no formato JSON contendo dois campos:
@@ -81,7 +81,7 @@ Caso queira executar os testes unitários (Opcional)
     pytest test_api.py
 
 ### Alguns exemplos de POST requests para a API
-
+#### Exemplo 1
 ```CURL
 curl --location --request POST 'localhost:8080/verify' \
 --header 'Content-Type: application/json' \
@@ -105,6 +105,7 @@ Resultado esperado:
     "noMatch": []
 }
 
+#### Exemplo 2
 ```CURL
 curl --location --request POST 'localhost:8080/verify' \
 --header 'Content-Type: application/json' \
@@ -132,6 +133,7 @@ Resultado esperado:
     ]
 }
 
+#### Exemplo 3
 ```CURL
 curl --location --request POST 'localhost:8080/verify' \
 --header 'Content-Type: application/json' \
