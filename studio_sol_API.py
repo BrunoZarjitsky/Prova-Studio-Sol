@@ -1,18 +1,19 @@
-#pip install requests
-#pip install fastapi
-#pip install uvicorn
-
 from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Union
 import uvicorn
 
+# Create the API app
 app = FastAPI()
 
+# Model class to receive the request
 class RequestModel(BaseModel):
     password: Union[str, None] = None
     rules: Union[list, None] = None
 
+# verify endpoint
+# This endpoint is responsable for receive the HTTP request, call
+# the verification method, and return a JSON with the result
 @app.post("/verify")
 def password_check(request: RequestModel = None):
     password_verification = PasswordVerification(
@@ -25,7 +26,10 @@ def password_check(request: RequestModel = None):
     }
     return payload
 
+# This class contains the verification methods specified at the API requirements
 class PasswordVerification:
+    # The init method receives the password and the rules at the request and calls the 
+    # method that will check the password for all the rules
     def __init__(self, password: str, rules: list):
         self.password = password
         self.rules = rules
