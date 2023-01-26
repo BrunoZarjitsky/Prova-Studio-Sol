@@ -59,10 +59,6 @@ Exemplo de retorno da API:
  - Python 3.10 (sudo apt-get install python3.10 )
  - venv (sudo apt-get install python3-venv)
 
-source venv_studio_sol/bin/activate
-
-pip install -r requirements.txt
-
 ## Como rodar o programa:
 Criando o ambiente virtual:
     
